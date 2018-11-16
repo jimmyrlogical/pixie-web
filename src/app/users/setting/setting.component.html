@@ -1,0 +1,424 @@
+
+    <app-header></app-header>
+    
+    <div class="container_full">
+        <app-sidebar></app-sidebar>
+    
+        <div class="content_wrapper">
+            <div class="inner_main"> 
+                <div class="full_width page_head">
+                    <h2 class="page_title line45">Settings</h2>                
+                </div>      	
+                <div class="full_width setting_main">
+                    <div class="row">
+    
+                        <div class="col-sm-12">
+                            <div id="accordion" class="accordion">
+                                <div class="box">
+                                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                                        <a class="card-title box_title">Profile</a>
+                                    </div>
+                                    <div id="collapseOne" class="card-body collapse" data-parent="#accordion" >
+                                        <div class="full_width pad15">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00">Account Type</h4>
+                                                    <div class="box_cnt auto_height padLR00">
+                                                        <ul>
+                                                            <li>
+                                                                <label class="custom_radio">Basic
+                                                                  <input type="radio" checked="checked" name="radio">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+    
+                                                            <li>
+                                                                <label class="custom_radio">Premium
+                                                                  <input type="radio" name="radio">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+    
+                                                            <li>
+                                                                <label class="custom_radio">Premium Extended
+                                                                  <input type="radio" name="radio">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+    
+                                                            <li>
+                                                                <label class="custom_radio">Enterprise
+                                                                  <input type="radio" name="radio">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+    
+                                                    <div class="form-box">
+                                                        <div class="form-group">
+                                                            <label>User Name</label>
+                                                            <input [(ngModel)]="userName" type="text" class="form-control" >
+                                                        </div>
+    
+                                                        <div class="form-group">
+                                                            <label>Nick Name</label>
+                                                            <input [(ngModel)]="nickName" type="text" class="form-control w95" >
+                                                            <span class="mandatory">
+                                                                <sup>*</sup>
+                                                                <i class="far fa-question-circle"></i>
+                                                            </span>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00">Profile Settings</h4>
+                                                    <div class="full_width pad15 pro_pic_box">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <h4 class="box_title padLR00">Profile Picture</h4>
+                                                                <div class="box_cnt auto_height padLR00">
+                                                                    <div class="author_pic">
+                                                                        <img src="assets/images/pro.jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <h4 class="box_title padLR00">Alternate Picture</h4>
+                                                                <div class="box_cnt auto_height padLR00">
+                                                                    <div class="author_pic">
+                                                                        <a class="edit_icon" href="#"><i class="fas fa-pencil-alt"></i></a>
+                                                                        <img src="assets/images/pro.jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <h4 class="box_title padLR00">Default Intro Pic</h4>
+    
+                                                                <div class="switch_main">
+                                                                    <span class="switch_txt">Profile</span>
+                                                                        <label class="switch">
+                                                                          <input type="checkbox">
+                                                                          <span class="slider round"></span>
+                                                                        </label>
+                                                                    <span class="switch_txt">Alternate</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="box">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        <a class="card-title box_title">Personal Information</a>
+                                    </div>
+                                    <div id="collapseTwo" class="card-body collapse" data-parent="#accordion" >
+                                        <div class="full_width pad15">
+                                            <div class="row">
+    
+                                                <div class="col-sm-12">
+                                                    <h4 class="box_title padLR00 mrgbtm15"><i class="fas fa-retweet"></i> Share When Connected</h4>
+                                                    <div class="form-box">  
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input [(ngModel)]="fullName" type="text" class="form-control w95" placeholder="Full Name">
+                                                                <span class="mandatory">
+                                                                    <sup>*</sup>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="check_w">
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input  [(ngModel)]="email"  type="text" class="form-control w95" placeholder="test@gmail.com">
+                                                                <span class="mandatory">
+                                                                    <sup>*</sup>
+                                                                </span>
+                                                            </div>
+                                                        </div>  
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input  [(ngModel)]="email"  type="text" class="form-control w95" placeholder="test@gmail.com">
+                                                                <span class="mandatory">
+                                                                    <sup>*</sup>
+                                                                </span>
+                                                            </div>
+                                                        </div>  
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input  [(ngModel)]="phone"  type="text" class="form-control w95" placeholder="Phone Number (Mobile)">
+                                                                <span class="mandatory">
+                                                                    <sup>*</sup>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input type="text" class="form-control" placeholder="Address">
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">                                                        
+                                                            <div class="check_input w100">
+                                                                <input type="text" class="form-control w25" placeholder="DOB">
+                                                                <label class="custom_check">I consent to <a href="#">PixieLinks Use of Personal Information</a>
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input type="text" class="form-control" placeholder="Facebook Handle (URL)">
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input type="text" class="form-control" placeholder="LinkedIn Handle (URL)">
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="form-group">                                                  
+                                                            <div class="check_w">    
+                                                                <label class="custom_check">
+                                                                  <input type="checkbox" checked="checked">
+                                                                  <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="check_input">
+                                                                <input type="text" class="form-control" placeholder="Twitter Handle (URL)">
+                                                            </div>
+                                                        </div>                                                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="box">
+                                    <div class="card-header" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                        <a class="card-title box_title">Pixie Preferences</a>
+                                    </div>
+                                    <div id="collapseThree" class="card-body collapse show" data-parent="#accordion" >
+                                        <div class="full_width pad15">
+                                            <div class="row">                                    
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00 mrgbtm15"><i class="fas fa-cog"></i> Request Preferences</h4>
+                                                    <div class="form-box">
+                                                        <div class="form-group">
+                                                            <label>Default Request Type</label>
+                                                            <select class="cm_select">
+                                                                <option>Personal</option>
+                                                                <option>Personal1</option>
+                                                                <option>Personal2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Pending Request Expiry</label>
+                                                            <select class="cm_select">
+                                                                <option>48 hrs</option>
+                                                                <option>32 hrs</option>
+                                                                <option>56 hrs</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00 mrgbtm15"><i class="fas fa-unlock-alt"></i> Privacy</h4>
+                                                    <div class="form-box">
+                                                        <div class="form-group">
+                                                            <label>Privacy Tolerance</label>
+                                                            <select class="cm_select">
+                                                                <option>Neutral</option>
+                                                                <option>Neutral1</option>
+                                                                <option>Neutral2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00 mrgbtm15"><i class="fas fa-wifi"></i> Connection Control</h4>
+                                                    <div class="form-box">
+                                                        <div class="form-group">
+                                                            <label>Intro Info Shared</label>
+                                                            <select class="cm_select">
+                                                                <option>Email and Phone</option>
+                                                                <option>Email and Phone1</option>
+                                                                <option>Email and Phone2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Default Connection</label>
+                                                            <select class="cm_select">
+                                                                <option>Open Direct</option>
+                                                                <option>Open Direct1</option>
+                                                                <option>Open Direct2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Locations Proximity</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox" checked="">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Time Proximity</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox" checked="">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Confirm Intro before Send</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Default Intro Note</label>
+                                                           <input type="text" class="form-control" value="Hello! I would like to Introduce myself.">
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-6">
+                                                    <h4 class="box_title padLR00 mrgbtm15"><i class="fas fa-arrow-circle-right"></i> Advanced</h4>
+                                                    <div class="form-box">
+                                                        <div class="form-group">
+                                                            <label>Locations Proximity Tolerance</label>
+                                                            <select class="cm_select">
+                                                                <option>Email and Phone</option>
+                                                                <option>Email and Phone1</option>
+                                                                <option>Email and Phone2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Time Proximity Tolerance</label>
+                                                            <select class="cm_select">
+                                                                <option>Open Direct</option>
+                                                                <option>Open Direct1</option>
+                                                                <option>Open Direct2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Message Expiry</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox" checked="">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Connection Notification</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox" checked="">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Hide Featured Events</label>
+                                                            <label class="switch">
+                                                              <input type="checkbox">
+                                                              <span class="slider round">
+                                                                  <div class="switch-txt on float-left">on</div>
+                                                                  <div class="switch-txt off float-right">off</div>
+                                                              </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Alternate Intro Note</label>
+                                                           <input type="text" class="form-control" value="BrandX: New Cars a discount">
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-sm-12 text-center mrgtop30 mrgbtm15">
+                                                    <a class="cs_btn" href="#">Update Settings</a>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    
+        <app-footer></app-footer>
+
+    </div>
