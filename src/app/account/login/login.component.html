@@ -1,0 +1,51 @@
+<div class="fl_w">
+  <div class="login_main_cls">
+        <div class="login_main_cls_inner">
+            <div class="left_login_part ad_hEight">
+                <div class="left_login_part_inner">
+                  <div class="logo_login_main">
+                      <a routerLink="/index"><img src="../../../assets/images/logo.png"></a>
+                  </div>
+
+                  <div class="login_box_mnc">
+                    <div class="login_box_mnc_inner">
+                      <!-- <form> -->
+                        <div class="group">      
+                          <input id="txtUserName" [(ngModel)]="userName" (keypress)="onKeyPress($event)" type="text" [ngClass]="{'cls-x-require': UserModelClass.userName }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Username</label>
+                          <div *ngIf="error" class="cs_error">Invalid Username or Password</div>
+                          </div>
+
+                          <div class="group">      
+                          <input id="txtPassword" [(ngModel)]="password" (keypress)="onKeyPress($event)" type="password" [ngClass]="{'cls-x-require': UserModelClass.password }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Password</label>
+                          </div>
+
+                          
+                          <div class="md-checkbox">
+                            <input id="i2" type="checkbox" [checked]="setRememberMe" (click)="checkUnCheck($event)">
+                            <label for="i2">Remember Me</label>
+                          </div>
+                        
+
+                        <div class="form-group">
+                          <input type="submit" value="Login" class="form_brntn" (click)="getLogin()">
+                        </div>
+
+                        <div class="form-group">
+                          <a class="login_links pull-left forgot_btn" routerLink="/forgotpassword" href="javascript:void(0)">Forgot your password ?</a>
+                          <a class="login_links pull-right reg_btn" routerLink="/register" href="javascript:void(0)">Need to Sign Up ?</a>
+                        </div>  								                  
+                      <!-- </form> -->
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

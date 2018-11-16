@@ -1,0 +1,92 @@
+<body class="login_bg">
+  <div class="login_main_cls">
+      <div class="login_main_cls_inner">
+          <div class="left_login_part ad_hEight">
+              <div class="left_login_part_inner">
+                <div class="logo_login_main">
+                    <a routerLink="/index"><img src="../../../assets/images/logo.png"></a>
+                </div>
+
+                <div class="register_form">
+                    <!-- <form> -->
+                      <div class="row">
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="text" [(ngModel)]="fullName" (keypress)="onKeyPress($event)" [ngClass]="{'cls-x-require': UserModelClass.fullName }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Full Name</label>
+                        </div>							  
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="text" [(ngModel)]="nickName" (keypress)="onKeyPress($event)" [ngClass]="{'cls-x-require': UserModelClass.nickName }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Nick Name</label>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="text" [(ngModel)]="birthDate" (keypress)="onKeyPress($event)" [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY', containerClass: 'theme-blue' }" [ngClass]="{'cls-x-require': UserModelClass.birthDate }" required  bsDatepicker>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Birth Date</label>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="text" [(ngModel)]="email" (keypress)="onKeyPress($event)" [ngClass]="{'cls-x-require': UserModelClass.email }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Email</label>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="password" [(ngModel)]="password" (keypress)="onKeyPress($event)" [ngClass]="{'cls-x-require': UserModelClass.password }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Password</label>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                        <div class="group">      
+                          <input type="password" [(ngModel)]="rePassword" (keypress)="onKeyPress($event)" [ngClass]="{'cls-x-require': UserModelClass.rePassword }" required>
+                          <span class="highlight"></span>
+                          <span class="bar"></span>
+                          <label>Verify Password</label>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12">
+                        <div class="md-checkbox">
+                          <input id="i3" type="checkbox" [checked]="iAgree" (click)="checkUnCheckAgree($event)">
+                            <label for="i3">I Agree to <a href="#">PixieLinks Terms</a></label>
+                        </div>							  
+                      </div>
+
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                            <input type="submit" value="SIGN UP" class="form_brntn" (click)="getRegister()">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-12">
+                        <div class="form-group mrg00">                            
+                          <a class="back_btn" routerLink="/login" href="javascript:void(0)"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to Login</a>
+                        </div> 
+                      </div>
+                    </div>
+                  <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
