@@ -38,7 +38,7 @@ function setSetting() {
        theme:"dark"
    });
     $(".bar_icon").click(function(){        
-        $('body').toggleClass('navSmall');    
+        $('body').toggleClass('navSmall');
     });
 }
 function setLogin(){

@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   public loginerror = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document,private http: HttpClient, private router: Router, private loginSvc: LoginService, private renderer: Renderer2) {
+    constructor(@Inject(DOCUMENT) private document: Document,private http: HttpClient, private router: Router, private loginSvc: LoginService, private renderer: Renderer2) {
     this.UserModel = new userModel();
     this.UserModel.userName = 'false';
     this.UserModel.password = 'false';

@@ -13,4 +13,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  public logout(data: any) {
+    console.log('logout here .. .. ..');
+    localStorage.removeItem('PL_userId');
+    this.router.navigateByUrl('/index');
+  }
+
 }

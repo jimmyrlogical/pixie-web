@@ -204,7 +204,7 @@ input, button, html input[type=button], input[type=reset], input[type=submit] {o
 .login_box_mnc_inner_MX { float: left;width: 100%; }
 
 .login_main_cls .form-group {float: left; width: 100%; margin-bottom: 45px;}
-.form_brntn { border: 2px solid #faa632; border-radius: 4px; box-shadow: none; width: 100%; line-height:40px; background: #faa632; color: #fff;font-size: 18px; display: inline-block;height: 100%; text-transform: uppercase; letter-spacing: 1px;}
+.form_brntn { cursor: pointer; border: 2px solid #faa632; border-radius: 4px; box-shadow: none; width: 100%; line-height:40px; background: #faa632; color: #fff;font-size: 18px; display: inline-block;height: 100%; text-transform: uppercase; letter-spacing: 1px;}
 .form_brntn:hover {background: #cb8112; border-color: #cb8112;}
 
 .register_form {float: none; width: 100%; max-width: 900px; margin: 0 auto; display: table;}
@@ -220,7 +220,7 @@ input, button, html input[type=button], input[type=reset], input[type=submit] {o
 #myVideo {width: 100%; background: #fff;}
 
 
-/*=================================================================================
+/*=================================================================================*/
 
 		/*========================== Dashboard ======================*/
 

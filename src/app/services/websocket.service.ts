@@ -26,7 +26,7 @@ export class WebsocketService {
    * @description Default constructor:  Define socket and events, but don't connect.
    */
   constructor() {
-    
+
     this.socket = io(this.SERVER_URL, {
       autoConnect: false,
       reconnection: true
@@ -39,6 +39,9 @@ export class WebsocketService {
       // Authenticated correctly.  Return token in returnObject.          
       this.socket.on("/api/user/login", (result: any) => {
         // If successful, reset the token in the query for future authentication
+
+        debugger;
+
         if (result.token) {
           if (!this.socket.io.opts.query.token) {
             this.socket.io.opts.query = { token: result.token };
@@ -51,6 +54,14 @@ export class WebsocketService {
 
         observer.next(returnMessage);
       });
+
+      // Authenticated correctly.  Return token in returnObject.          
+      this.socket.on("/api/user_get", (result: any) => {
+        // If successful, reset the token in the query for future authentication
+        debugger;
+        observer.next(returnMessage);
+      });
+
       // Create user.
       this.socket.on("/api/user_post", (result: any) => {
         // If successful, DON'T log in, just say so and close connection.
@@ -122,6 +133,21 @@ export class WebsocketService {
     // .open() will trigger events defined in cosntructor.
     this.socket.open();
   }
+
+  public getUserFromUserId(id: string): void {
+
+    debugger;
+    // this.disconnect();
+
+    if (this.SocketConnectionStatus() == ConnectionStatus.Connected) {
+      this.disconnect();
+    }
+
+    this.socket.io.opts.query = { id: id };
+    // .open() will trigger events defined in cosntructor.
+    this.socket.open();
+  }
+
 
   public userRegistration(full_name: string, nickname: string, email: string, password: string, phone: string, birth_date: string): void {
 
@@ -220,7 +246,7 @@ export class WebsocketService {
    * 
    * @param settingputUser 
    */
-  public settingputUser(settingdata: any): void {
+  public settingPutUser(settingdata: any): void {
 
     //if (this.SocketConnectionStatus() == ConnectionStatus.Connected) {
     this.disconnect();
@@ -259,7 +285,7 @@ export class WebsocketService {
    */
 
   public exec(method: string): Rx.Subject<MessageEvent> {
-
+    debugger;
     let observable;
     let observer;
 
@@ -268,11 +294,15 @@ export class WebsocketService {
     } else {
       // We define our observable which will observe any incoming messages
       // from our socket.io server.
-      observable = new Observable((observer: any) => {
+      observable = new Observable(observer => {
+        console.log(method);
         this.socket.on(method, (data) => {
-          console.log("Received message from Websocket Server");
+          console.log("Received message from Websocket Server")
           observer.next(data);
-        });
+        })
+        return () => {
+          this.socket.disconnect();
+        }
       });
 
       // We define our Observer which will listen to messages
@@ -291,5 +321,5 @@ export class WebsocketService {
   }
 
 
-  
+
 }
